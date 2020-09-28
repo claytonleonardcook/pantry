@@ -1,0 +1,8 @@
+.Item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    > div {
+        align-content: flex-end;
+    }
+}

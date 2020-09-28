@@ -1,36 +1,32 @@
 .Login {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    > div:nth-child(2) {
-        height: 100%;
-        width: 50%;
-        margin: 0 auto;
+    margin: 25vh 0;
+    text-align: center;
+    > h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 0;
+    }
+    > form {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        background-color: gray;
-        > div:first-child {
-            background-image: url("https://jadeallencook.github.io/Dinr/build/static/media/banner.5aa57b03.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        > div:last-child {
-            padding: 5px 0 0 0;
-            > form {
-                display: grid;
-                grid-template-rows: 1fr 1fr 1fr;
-                grid-template-columns: 1fr;
-                row-gap: 5px;
-                > input,
-                button {
-                    margin: 0 auto;
-                    width: 50%;
-                }
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        justify-content: center;
+        > div {
+            text-align: left;
+            > label {
+                display: block;
+            }
+            > input {
+                height: 3vh;
+                width: 80vw;
             }
         }
+        > button {
+            height: 5vh;
+            width: 80vw;
+        }
+    }
+    > span {
+        font-size: 0.75em;
     }
 }
