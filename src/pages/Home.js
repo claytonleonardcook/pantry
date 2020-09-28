@@ -5,13 +5,16 @@ import './Home.scss';
 import List from '../components/List';
 
 function Home() {
-  let [input, setInput] = useState('');
   let [items, setItems] = useState(['Milk', 'Vegatables', 'Fruit', 'Eggs']);
   return (
     <div className="Home">
       <div>
         <h1>My List</h1>
-        <input placeholder='Add Item' />
+        <input placeholder='Add Item' onKeyDown={(e) => {
+          if(e.key === 'Enter') {
+            setItems([...items, e.target.value]);
+          }
+        }}/>
       </div>
       <hr />
       <List items={items} />
