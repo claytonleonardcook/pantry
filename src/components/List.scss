@@ -1,0 +1,10 @@
+.List {
+    width: 80vw;
+    height: 80vh;
+    margin: auto auto;
+    > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -4,8 +4,9 @@ import './Login.scss';
 function Login() {
   return (
     <div className="Login">
+      <div />
       <div>
-        <img src="https://via.placeholder.com/350x150" />
+        <div />
         <div>
           <form>
             <input placeholder="Username" />
@@ -15,6 +16,7 @@ function Login() {
           <a>Sign Up</a>
         </div>
       </div>
+      < div />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from './components/Home';
-import Login from './components/Login';
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 import './App.scss';
 
