@@ -1,3 +1,19 @@
 .Home {
-    margin: auto auto;
+    > div {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        > input {
+            height: 2em;
+            width: 8em;
+        }
+        > h1, input {
+            display: inline-block;
+            margin: 20px 20px;
+        }
+    }
+    > .List {
+        margin: 10px 20px;
+    }
 }

@@ -1,8 +1,11 @@
 .Item {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    > div {
-        align-content: flex-end;
+    font-size: 2em;
+    > h2 {
+        font-size: 2em;
+        margin: 10px 20px;
+    }
+    > input {
+        font-size: 0.5em;
+        display: inline;
     }
 }

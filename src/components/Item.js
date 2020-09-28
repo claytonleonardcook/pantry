@@ -4,6 +4,7 @@ import './Item.scss';
 function Item(props) {
     return (
         <li className="Item">
+            <input type="checkbox" />
             {props.value}
         </li>
     );

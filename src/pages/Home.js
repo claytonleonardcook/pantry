@@ -6,10 +6,15 @@ import List from '../components/List';
 
 function Home() {
   let [input, setInput] = useState('');
-  let [items, setItems] = useState([0, 1, 2, 3]);
+  let [items, setItems] = useState(['Milk', 'Vegatables', 'Fruit', 'Eggs']);
   return (
     <div className="Home">
-      <List items={items}/>
+      <div>
+        <h1>My List</h1>
+        <input placeholder='Add Item' />
+      </div>
+      <hr />
+      <List items={items} />
     </div>
   );
 }
