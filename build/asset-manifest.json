@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Grocery-List-App/build/static/css/main.a3b46f74.chunk.css",
+    "main.js": "/Grocery-List-App/build/static/js/main.ad36150d.chunk.js",
+    "main.js.map": "/Grocery-List-App/build/static/js/main.ad36150d.chunk.js.map",
+    "runtime-main.js": "/Grocery-List-App/build/static/js/runtime-main.ffe34060.js",
+    "runtime-main.js.map": "/Grocery-List-App/build/static/js/runtime-main.ffe34060.js.map",
+    "static/js/2.7b520b76.chunk.js": "/Grocery-List-App/build/static/js/2.7b520b76.chunk.js",
+    "static/js/2.7b520b76.chunk.js.map": "/Grocery-List-App/build/static/js/2.7b520b76.chunk.js.map",
+    "index.html": "/Grocery-List-App/build/index.html",
+    "precache-manifest.044f22f85a39625b7f5a334a8cbdf884.js": "/Grocery-List-App/build/precache-manifest.044f22f85a39625b7f5a334a8cbdf884.js",
+    "service-worker.js": "/Grocery-List-App/build/service-worker.js",
+    "static/css/main.a3b46f74.chunk.css.map": "/Grocery-List-App/build/static/css/main.a3b46f74.chunk.css.map",
+    "static/js/2.7b520b76.chunk.js.LICENSE.txt": "/Grocery-List-App/build/static/js/2.7b520b76.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ffe34060.js",
+    "static/js/2.7b520b76.chunk.js",
+    "static/css/main.a3b46f74.chunk.css",
+    "static/js/main.ad36150d.chunk.js"
+  ]
+}
