@@ -1,16 +1,32 @@
 .Home {
     > div {
         display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.8fr;
+        grid-template-columns: 1fr;
         text-align: center;
-        > input {
-            height: 2em;
-            width: 8em;
+        > div:first-child {
+            > input {
+                width: 80vw;
+            }
+            > button {
+                width: 35px;
+            }
+            > input,
+            button {
+                font-size: 1em;
+                margin: 10px 5px;
+            }
         }
-        > h1, input {
-            display: inline-block;
-            margin: 20px 20px;
+        > div:last-child {
+            display: inline;
+            > button {
+                float: left;
+                font-size: 0.7em;
+                margin: 0 10px;
+            }
+            > button:focus {
+                filter: invert(100%);
+            }
         }
     }
     > .List {

@@ -5,19 +5,30 @@ import './Home.scss';
 import List from '../components/List';
 
 function Home() {
-  let [items, setItems] = useState(['Milk', 'Vegatables', 'Fruit', 'Eggs']);
+  let [list, setList] = useState(['Milk', 'Vegatables', 'Fruit', 'Eggs']);
+  let [sortedList, setSortedList] = useState([]);
   return (
     <div className="Home">
       <div>
-        <h1>My List</h1>
-        <input placeholder='Add Item' onKeyDown={(e) => {
-          if(e.key === 'Enter') {
-            setItems([...items, e.target.value]);
-          }
-        }}/>
+        <div>
+          <input id='addItem' placeholder='Add Item' />
+          <button onClick={() => {
+            setList([...list, document.querySelector('input#addItem').value]);
+            document.querySelector('input#addItem').value = null;
+          }}>+</button>
+        </div>
+        <div>
+          <button onClick={() => {
+            setSortedList(list);
+          }}>All</button>
+          <button onClick={() => {
+            //setSortedList(list.filter());
+          }}>Checked</button>
+          <button>Unchecked</button>
+        </div>
       </div>
       <hr />
-      <List items={items} />
+      <List list={sortedList} />
     </div>
   );
 }
