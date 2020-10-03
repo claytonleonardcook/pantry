@@ -1,7 +1,7 @@
 .Home {
     > div {
         display: grid;
-        grid-template-rows: 1fr 0.8fr;
+        grid-template-rows: 1fr 0.5fr;
         grid-template-columns: 1fr;
         text-align: center;
         > div:first-child {
@@ -18,14 +18,14 @@
             }
         }
         > div:last-child {
-            display: inline;
-            > button {
-                float: left;
-                font-size: 0.7em;
-                margin: 0 10px;
-            }
-            > button:focus {
-                filter: invert(100%);
+            > div {
+                margin: auto 10px 0 10px;
+                display: inline;
+                > input, label {
+                    font-size: 1em;
+                    height: 1em;
+                    width: 1em;
+                }
             }
         }
     }
