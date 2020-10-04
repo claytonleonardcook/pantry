@@ -4,7 +4,7 @@ import 'firebase/database';
 import './List.scss';
 
 function List({ list, filters, user }) {
-    const deleteItem = key => firebase.database().ref(`${user.uuid}/${key}`).remove();
+    const deleteItem = key => firebase.database().ref(`${user.uid}/${key}`).remove();
 
     return (
         <ul className="List">

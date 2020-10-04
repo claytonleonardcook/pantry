@@ -14,7 +14,7 @@ function Login({ user }) {
     if (user) {
       history.push('/home');
     }
-  }, [user]);
+  }, [user, history]);
 
   const signIn = () => firebase.auth().signInWithEmailAndPassword(email, password).catch(err => setError(err.message));
   const createAccount = () => firebase.auth().createUserWithEmailAndPassword(email, password).catch(err => setError(err.message));
