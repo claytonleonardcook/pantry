@@ -1,61 +1,70 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import firebase from 'firebase/app';
 import { useState } from 'react';
 import './Home.scss';
 
 import List from '../components/List';
+import Item from '../classes/Item';
 
-function Home() {
-  let [list, setList] = useState(
-    {
-      Milk: true,
-      Eggs: false,
-      Vegtables: false,
-      Meat: true
-    }
-  );
-  let [sortedList, setSortedList] = useState([]);
+function Home({ list, setList, user }) {
+  const history = useHistory();
+  const [item, setItem] = useState('');
+  const [filters, setFilters] = useState({
+    checked: true,
+    unchecked: true
+  });
+
+  if (!user) {
+    history.push('/');
+  }
+
+  const addItem = () => firebase
+    .database()
+    .ref(`/${user.uid}`)
+    .push(new Item(item))
+    .then(() => setItem(''));
+
+
+  const signOut = () => firebase
+    .auth()
+    .signOut();
 
   return (
     <div className="Home">
       <div>
+        <button onClick={signOut}>Sign Out</button>
         <div>
-          <input id='addItem' placeholder='Add Item' />
-          <button onClick={() => {
-            let newList = list;
-            newList[document.querySelector('input#addItem').value] = false
-            setList(newList);
-            document.querySelector('input#addItem').value = null;
-          }}>+</button>
+          <input value={item} onChange={e => setItem(e.target.value)} />
+          <button onClick={addItem}>Add Item</button>
         </div>
         <div>
           <form>
             <div>
-              <input type='radio' name='filter' value='All' defaultChecked onChange={() => {
-                setSortedList(Object.entries(list));
-              }} />
-              <label>All</label>
+              <input id="all" type="radio" name="filters" value={(filters.checked && filters.unchecked)} defaultChecked onChange={e => setFilters({
+                checked: true,
+                unchecked: true
+              })} />
+              <label htmlFor="all">All</label>
             </div>
             <div>
-              <input type='radio' name='filter' value='Checked' onChange={() => {
-                setSortedList(Object.entries(list).filter((item) => {
-                  return item[1] ? [item[0], item[1]] : null;
-                }));
-              }} />
-              <label>Checked</label>
+              <input id="checked" type="radio" name="filters" value={filters.checked} onChange={e => setFilters({
+                checked: true,
+                unchecked: false
+              })} />
+              <label htmlFor="checked">Checked</label>
             </div>
             <div>
-              <input type='radio' name='filter' value='Unchecked' onChange={() => {
-                setSortedList(Object.entries(list).filter((item) => {
-                  return !item[1] ? [item[0], item[1]] : null;
-                }));
-              }}/>
-              <label>Unchecked</label>
+              <input id="unchecked" type="radio" name="filters" value={filters.unchecked} onChange={e => setFilters({
+                checked: false,
+                unchecked: true
+              })} />
+              <label htmlFor="unchecked">Unchecked</label>
             </div>
           </form>
         </div>
       </div>
-      <hr />
-      <List list={sortedList} />
+      <List list={list} setList={setList} filters={filters} user={user} />
     </div>
   );
 }

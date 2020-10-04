@@ -6,48 +6,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-label {
-  outline: none;
-  font-size: 0.75em;
-}
-
-input {
-  padding: 5px;
-  outline: none;
-  border: solid black 2px;
-  font-size: 1.25em;
-}
-
-hr {
-  background-color: black;
-  width: 95%;
-  height: 3px;
-  border: none;
-  margin: auto;
-}
-
-button {
-  outline: none;
-  border: none;
-  border: solid white 1px;
-  color: white;
-  background-color: black;
-  padding: 10px;
-  font-size: 1em;
-  font-weight: bold;
-  margin: auto;
-}
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-input[type="checkbox"] {
-  outline: 0;
-  margin: 10px;
-  padding: 20px;
-  height: 2em;
-  width: 2em;
 }

@@ -7,23 +7,29 @@
         margin: 0;
     }
     > form {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px;
-        justify-content: center;
-        > div {
+        > label {
             text-align: left;
-            > label {
-                display: block;
-            }
-            > input {
-                height: 3vh;
-                width: 80vw;
-            }
+            display: block;
         }
-        > button {
-            height: 5vh;
+        > input, 
+        > label,
+        > button,
+        > p {
+            margin: 0 auto;
             width: 80vw;
+        }
+        > input, 
+        > button {
+            margin-bottom: 10px;
+        }
+        > hr {
+            width: 75vw;
+            border: thin #000 1px;
+            margin: 20px auto;
+        }
+        > p {
+            color: #F00;
+            margin: 20px auto;
         }
     }
     > span {

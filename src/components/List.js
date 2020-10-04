@@ -1,15 +1,30 @@
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import './List.scss';
 
-import Item from './Item';
+function List({ list, filters, user }) {
+    const deleteItem = key => firebase.database().ref(`${user.uuid}/${key}`).remove();
 
-function List(props) {
     return (
         <ul className="List">
             {
-                props.list.map((item, index) => (
-                    <Item key={index} value={item} />
-                ))
+                Object.keys(list).filter((key) => {
+                    const { checked, unchecked } = filters;
+                    const item = list[key];
+                    return ((checked && unchecked) || (checked && item.checked) || (unchecked && !item.checked));
+                }).map((key) => {
+                    const { name, checked } = list[key];
+                    return (
+                        <li key={key}>
+                            <input type="checkbox" value={checked} checked={checked} onChange={() => {
+                                firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
+                            }} />
+                            {name}
+                            <button onClick={() => deleteItem(key)}>Delete</button>
+                        </li>
+                    )
+                })
             }
         </ul>
     );

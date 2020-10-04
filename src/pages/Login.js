@@ -1,29 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import './Login.scss';
 
-function Login() {
+function Login({ user }) {
   const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (user) {
+      history.push('/home');
+    }
+  }, [user]);
+
+  const signIn = () => firebase.auth().signInWithEmailAndPassword(email, password).catch(err => setError(err.message));
+  const createAccount = () => firebase.auth().createUserWithEmailAndPassword(email, password).catch(err => setError(err.message));
   return (
     <div className="Login">
       <h1>PANTRY</h1>
       <form>
-        <div>
-          <label>Email</label>
-          <input id='email' type='text' />
-        </div>
-        <div>
-          <label>Password</label>
-          <input id='password' type='password' />
-        </div>
+        <label htmlFor="email">Email</label>
+        <input id="email" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+        <label htmlFor="password">Password</label>
+        <input id="password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
         <hr />
-        <button onClick={() => {
-          history.push('/home');
-        }}>Sign In</button>
-        <button onClick={() => {
-          console.log(document.querySelector('input#email').value,
-            document.querySelector('input#password').value)
-        }}>Create Account</button>
+        <p>{error}</p>
+        <button onClick={signIn}>Sign In</button>
+        <button onClick={createAccount}>Create Account</button>
       </form>
       <span>PANTRY | Developed by @claytoncook</span>
     </div>

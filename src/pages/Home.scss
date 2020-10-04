@@ -1,15 +1,10 @@
 .Home {
     > div {
-        display: grid;
-        grid-template-rows: 1fr 0.5fr;
-        grid-template-columns: 1fr;
         text-align: center;
-        > div:first-child {
+        margin: 20px 0;
+        > div:nth-child(2) {
             > input {
-                width: 80vw;
-            }
-            > button {
-                width: 35px;
+                width: 60vw;
             }
             > input,
             button {
@@ -18,13 +13,16 @@
             }
         }
         > div:last-child {
-            > div {
-                margin: auto 10px 0 10px;
-                display: inline;
-                > input, label {
-                    font-size: 1em;
-                    height: 1em;
-                    width: 1em;
+            margin: 10px 0;
+            > form {
+                > div {
+                    display: inline;
+                    margin: auto 10px 0 10px;
+                    > input, label {
+                        font-size: 1em;
+                        height: 1em;
+                        width: 1em;
+                    }
                 }
             }
         }
