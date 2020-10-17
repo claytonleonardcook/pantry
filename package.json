@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://claytoncook.github.io/Grocery-List-App/build",
+  "homepage": "https://claytoncook.github.io/Pantry/build",
   "dependencies": {
     "cra-template": "1.0.3",
     "firebase": "^7.22.0",
