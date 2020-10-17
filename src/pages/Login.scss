@@ -1,7 +1,14 @@
+@import '../animations.scss';
+
 .Login {
     margin: 25vh 0;
     text-align: center;
     > h1 {
+        animation-name: fadeSlideDown;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        position: relative;
         text-align: center;
         font-size: 3em;
         margin: 0;
@@ -33,6 +40,11 @@
         }
     }
     > span {
+        animation-name: fadeSlideUp;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        position: relative;
         font-size: 0.75em;
     }
 }

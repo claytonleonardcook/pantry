@@ -1,0 +1,14 @@
+@keyframes fadeSlideDown {
+    from {top: -20vh; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+@keyframes fadeSlideUp {
+    from {top: 20vh; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+@keyframes slideRightIn {
+    from {left: -50vh;}
+    to {left: 0;}
+}
