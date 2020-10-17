@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Grocery-List-App/build/static/css/main.e6fd333e.chunk.css",
-    "main.js": "/Grocery-List-App/build/static/js/main.a446af12.chunk.js",
-    "main.js.map": "/Grocery-List-App/build/static/js/main.a446af12.chunk.js.map",
-    "runtime-main.js": "/Grocery-List-App/build/static/js/runtime-main.ffe34060.js",
-    "runtime-main.js.map": "/Grocery-List-App/build/static/js/runtime-main.ffe34060.js.map",
-    "static/js/2.d0bbd0fc.chunk.js": "/Grocery-List-App/build/static/js/2.d0bbd0fc.chunk.js",
-    "static/js/2.d0bbd0fc.chunk.js.map": "/Grocery-List-App/build/static/js/2.d0bbd0fc.chunk.js.map",
-    "index.html": "/Grocery-List-App/build/index.html",
-    "precache-manifest.7d8ee30b4eef0436a902644f18f78cdf.js": "/Grocery-List-App/build/precache-manifest.7d8ee30b4eef0436a902644f18f78cdf.js",
-    "service-worker.js": "/Grocery-List-App/build/service-worker.js",
-    "static/css/main.e6fd333e.chunk.css.map": "/Grocery-List-App/build/static/css/main.e6fd333e.chunk.css.map",
-    "static/js/2.d0bbd0fc.chunk.js.LICENSE.txt": "/Grocery-List-App/build/static/js/2.d0bbd0fc.chunk.js.LICENSE.txt"
+    "main.css": "/Pantry/build/static/css/main.8fc3ae71.chunk.css",
+    "main.js": "/Pantry/build/static/js/main.130f8a42.chunk.js",
+    "main.js.map": "/Pantry/build/static/js/main.130f8a42.chunk.js.map",
+    "runtime-main.js": "/Pantry/build/static/js/runtime-main.1f3a4de8.js",
+    "runtime-main.js.map": "/Pantry/build/static/js/runtime-main.1f3a4de8.js.map",
+    "static/js/2.e4d00295.chunk.js": "/Pantry/build/static/js/2.e4d00295.chunk.js",
+    "static/js/2.e4d00295.chunk.js.map": "/Pantry/build/static/js/2.e4d00295.chunk.js.map",
+    "index.html": "/Pantry/build/index.html",
+    "precache-manifest.37b427e6d4a09a246b3f6759931d48c6.js": "/Pantry/build/precache-manifest.37b427e6d4a09a246b3f6759931d48c6.js",
+    "service-worker.js": "/Pantry/build/service-worker.js",
+    "static/css/main.8fc3ae71.chunk.css.map": "/Pantry/build/static/css/main.8fc3ae71.chunk.css.map",
+    "static/js/2.e4d00295.chunk.js.LICENSE.txt": "/Pantry/build/static/js/2.e4d00295.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ffe34060.js",
-    "static/js/2.d0bbd0fc.chunk.js",
-    "static/css/main.e6fd333e.chunk.css",
-    "static/js/main.a446af12.chunk.js"
+    "static/js/runtime-main.1f3a4de8.js",
+    "static/js/2.e4d00295.chunk.js",
+    "static/css/main.8fc3ae71.chunk.css",
+    "static/js/main.130f8a42.chunk.js"
   ]
 }
