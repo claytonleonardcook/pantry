@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import './List.scss';
 
-function List({ list, filters, user }) {
+function List({ list, setList, filters, user }) {
     const deleteItem = key => firebase.database().ref(`${user.uid}/${key}`).remove();
 
     return (
@@ -16,11 +16,10 @@ function List({ list, filters, user }) {
                 }).map((key, index) => {
                     const { name, checked } = list[key];
                     return (
-                        <li key={key} style={{animationDuration: `${((index/8)+1.5)}s`, textDecoration: 'line-through'}}>
-                            <input type="checkbox" value={checked} checked={checked} onChange={() => {
+                        <li key={key} style={{ textDecoration: (checked) ? 'line-through' : 'none' }}>
+                            <span onClick={() => {
                                 firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
-                            }} />
-                            {name}
+                            }}>{name}</span>
                             <button onClick={() => deleteItem(key)}>Delete</button>
                         </li>
                     )
