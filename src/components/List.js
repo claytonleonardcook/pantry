@@ -1,5 +1,7 @@
 import React from 'react';
 import firebase from 'firebase/app';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import 'firebase/database';
 import './List.scss';
 
@@ -16,11 +18,11 @@ function List({ list, setList, filters, user }) {
                 }).map((key, index) => {
                     const { name, checked } = list[key];
                     return (
-                        <li key={key} style={{ textDecoration: (checked) ? 'line-through' : 'none' }}>
-                            <span onClick={() => {
+                        <li key={key}>
+                            <span style={{ textDecoration: (checked) ? 'line-through' : 'none' }} onClick={() => {
                                 firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
                             }}>{name}</span>
-                            <button onClick={() => deleteItem(key)}>Delete</button>
+                            <FontAwesomeIcon onClick={() => deleteItem(key)} icon={faEllipsisV} />
                         </li>
                     )
                 })

@@ -35,7 +35,7 @@ function Home({ list, setList, user }) {
       <div>
         <button onClick={signOut}>Sign Out</button>
         <div>
-          <input value={item} onChange={e => setItem(e.target.value)} />
+          <input value={item} maxLength={29} onChange={e => setItem(e.target.value)} />
           <button onClick={addItem}>Add Item</button>
         </div>
         <div>
