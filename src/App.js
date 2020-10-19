@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Edit from './pages/Edit';
 
 import firebase from 'firebase/app';
 import 'firebase/database';
@@ -40,6 +42,7 @@ function App() {
           <Route exact path="/home">
             <Home list={list} setList={setList} user={user} />
           </Route>
+          <Route exact path='/edit/:key' component={({ match }) => <Edit params={match.params} user={user} list={list}/>}/>
         </Switch>
       </Router>
     </div>

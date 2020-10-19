@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
@@ -6,8 +7,7 @@ import 'firebase/database';
 import './List.scss';
 
 function List({ list, setList, filters, user }) {
-    const deleteItem = key => firebase.database().ref(`${user.uid}/${key}`).remove();
-
+    const history = useHistory();
     return (
         <ul className="List">
             {
@@ -22,7 +22,7 @@ function List({ list, setList, filters, user }) {
                             <span style={{ textDecoration: (checked) ? 'line-through' : 'none' }} onClick={() => {
                                 firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
                             }}>{name}</span>
-                            <FontAwesomeIcon onClick={() => deleteItem(key)} icon={faEllipsisV} />
+                            <FontAwesomeIcon onClick={() => history.push(`/edit/${key}`)} icon={faEllipsisV} />
                         </li>
                     )
                 })

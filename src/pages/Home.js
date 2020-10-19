@@ -9,7 +9,7 @@ import Item from '../classes/Item';
 
 function Home({ list, setList, user }) {
   const history = useHistory();
-  const [item, setItem] = useState('');
+  const [name, setName] = useState('');
   const [filters, setFilters] = useState({
     checked: true,
     unchecked: true
@@ -22,8 +22,8 @@ function Home({ list, setList, user }) {
   const addItem = () => firebase
     .database()
     .ref(`/${user.uid}`)
-    .push(new Item(item))
-    .then(() => setItem(''));
+    .push(new Item(name))
+    .then(() => setName(''));
 
 
   const signOut = () => firebase
@@ -35,7 +35,7 @@ function Home({ list, setList, user }) {
       <div>
         <button onClick={signOut}>Sign Out</button>
         <div>
-          <input value={item} maxLength={29} onChange={e => setItem(e.target.value)} />
+          <input value={name} maxLength={29} onChange={e => setName(e.target.value)} />
           <button onClick={addItem}>Add Item</button>
         </div>
         <div>
@@ -64,7 +64,7 @@ function Home({ list, setList, user }) {
           </form>
         </div>
       </div>
-      <List list={list} setList={setList} filters={filters} user={user} />
+      <List list={list} setList={setList} filters={filters} user={user}/>
     </div>
   );
 }
