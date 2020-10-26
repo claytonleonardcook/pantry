@@ -64,6 +64,7 @@ function Home({ list, setList, user }) {
         </div>
       </div>
       <List list={list} setList={setList} filters={filters} user={user} />
+      <button onClick={() => history.push('/edit/0')}>Add</button>
     </div>
   );
 }

@@ -55,7 +55,7 @@ function Edit({ params, user, list }) {
 
             <button onClick={() => {
                 console.log(name, tags);
-            }}>{item ? 'Update' : 'Add'}</button>
+            }}>{list[key] ? 'Update' : 'Add'}</button>
             <button onClick={() => {
                 firebase.database().ref(`${user.uid}/${key}`).remove();
                 history.goBack();
