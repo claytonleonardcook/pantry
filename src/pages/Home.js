@@ -1,29 +1,22 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
 import { useState } from 'react';
 import './Home.scss';
 
 import List from '../components/List';
-import Item from '../classes/Item';
 
 function Home({ list, setList, user }) {
   const history = useHistory();
   if (!user) {
     history.push('/');
   }
-  const [name, setName] = useState('');
   const [filters, setFilters] = useState({
     checked: true,
     unchecked: true
   });
-
-  const addItem = () => firebase
-    .database()
-    .ref(`/${user.uid}`)
-    .push(new Item(name))
-    .then(() => setName(''));
-
 
   const signOut = () => firebase
     .auth()
@@ -33,10 +26,6 @@ function Home({ list, setList, user }) {
     <div className="Home">
       <div>
         <button onClick={signOut}>Sign Out</button>
-        <div>
-          <input value={name} maxLength={29} onChange={e => setName(e.target.value)} />
-          <button onClick={addItem}>Add Item</button>
-        </div>
         <div>
           <form>
             <div>
@@ -64,7 +53,9 @@ function Home({ list, setList, user }) {
         </div>
       </div>
       <List list={list} setList={setList} filters={filters} user={user} />
-      <button onClick={() => history.push('/edit/0')}>Add</button>
+      <button onClick={() => history.push('/edit/0')}>
+        <FontAwesomeIcon icon={faPlus}/>
+      </button>
     </div>
   );
 }
