@@ -1,3 +1,21 @@
 .Edit {
-    
+    margin: 25vh 0;
+    text-align: center;
+    > div {
+        margin: 20px 0;
+        > label {
+            margin: 5px 20px;
+        }
+    }
+    > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        > li {
+            margin: 5px 0;
+        }
+    }
+    > button {
+        width: 80vw;
+        margin: 5px auto;
+    }
 }

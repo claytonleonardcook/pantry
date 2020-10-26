@@ -9,15 +9,14 @@ import Item from '../classes/Item';
 
 function Home({ list, setList, user }) {
   const history = useHistory();
+  if (!user) {
+    history.push('/');
+  }
   const [name, setName] = useState('');
   const [filters, setFilters] = useState({
     checked: true,
     unchecked: true
   });
-
-  if (!user) {
-    history.push('/');
-  }
 
   const addItem = () => firebase
     .database()
@@ -64,7 +63,7 @@ function Home({ list, setList, user }) {
           </form>
         </div>
       </div>
-      <List list={list} setList={setList} filters={filters} user={user}/>
+      <List list={list} setList={setList} filters={filters} user={user} />
     </div>
   );
 }
