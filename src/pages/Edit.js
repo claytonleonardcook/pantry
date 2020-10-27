@@ -17,17 +17,6 @@ function Edit({ params, user, list }) {
     const [name, setName] = useState(item?.name);
     const [tags, setTags] = useState(item?.tags);
 
-    /*
-    dairy: false,
-    vegetable: false,
-    fruit: false,
-    meat: false,
-    sweet: false,
-    fiber: false,
-    other: false
-    */
-
-    //onClick={() => firebase.database().ref(`${user.uid}/${key}`).set({ name, checked: false, tags })}
     return (
         <div className="Edit">
             <div>
@@ -54,7 +43,14 @@ function Edit({ params, user, list }) {
             </ul>
 
             <button onClick={() => {
-                console.log(name, tags);
+                if(list[key]) {
+                    console.log('Update')
+                    firebase.database().ref(`${user.uid}/${key}`).set({ name, checked: false, tags });
+                } else {
+                    console.log('Add')
+                    firebase.database().ref(`${user.uid}/`).push({ name, checked: false, tags });
+                }
+                history.goBack();
             }}>{list[key] ? 'Update' : 'Add'}</button>
             <button onClick={() => {
                 firebase.database().ref(`${user.uid}/${key}`).remove();
