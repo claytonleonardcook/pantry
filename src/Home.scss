@@ -1,0 +1,20 @@
+.Home {
+    > header {
+        > div {
+            > button {
+                color: #ffffff;
+            }
+            > button:last-child {
+                margin-left: auto;
+            }
+        }
+    }
+    > ul {
+        margin: 50px 0;
+    }
+    > button {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+}

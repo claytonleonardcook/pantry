@@ -1,0 +1,27 @@
+.CheckList {
+    > li {
+        padding: 10px 30px;
+        > div:first-child {
+            > ::first-letter {
+                text-transform: capitalize;
+            }
+            > span {
+                font-size: 1.3em;
+            }
+            > p {
+                > span {
+                    font-size: 1.6em;
+                    > svg {
+                        padding: 0 2px;
+                    }
+                }
+            }
+        }
+        > div:last-child {
+            font-size: 2em;
+            > svg {
+                margin-left: auto;
+            }
+        }
+    }
+}

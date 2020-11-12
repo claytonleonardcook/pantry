@@ -1,0 +1,41 @@
+.Edit {
+    text-align: center;
+    > header {
+        > div {
+            > button {
+                margin-left: auto;
+            }
+        }
+    }
+    > div {
+        width: 80vw;
+        margin-top: 100px;
+        > div:last-child {
+            > hr {
+                margin: 30px 0;
+            }
+            > label {
+                margin: 5px 0;
+                > span:last-child {
+                    width: 100%;
+                    text-transform: capitalize;
+                    > span {
+                        > span {
+                            float: left;
+                        }
+                        > svg {
+                            float: right;
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+            > div {
+                > button {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}

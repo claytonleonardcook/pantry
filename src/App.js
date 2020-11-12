@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Edit from './pages/Edit';
+import Home from './Home';
+import Login from './Login';
+import Edit from './Edit';
 
+import firebaseConfig from './firebaseConfig.json';
 import firebase from 'firebase/app';
 import 'firebase/database';
-import firebaseConfig from './constants/firebaseConfig.json';
+import 'firebase/analytics';
 
 import './App.scss';
 
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 function App() {
   const [user, setUser] = useState(null);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState({});
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -40,7 +42,7 @@ function App() {
             <Login user={user} />
           </Route>
           <Route exact path="/home">
-            <Home list={list} setList={setList} user={user} />
+            <Home list={list} user={user} />
           </Route>
           <Route exact path='/edit/:key' component={({ match }) => <Edit params={match.params} user={user} list={list}/>}/>
         </Switch>

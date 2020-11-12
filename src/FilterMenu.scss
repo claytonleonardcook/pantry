@@ -1,0 +1,39 @@
+.FilterMenu {
+    z-index: 1101;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000060;
+    > div {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: 25vh;
+        height: 475px;
+        width: 300px;
+        > svg {
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 2em;
+        }
+        > div {
+            > ul {
+                > li {
+                    text-transform: capitalize;
+                    > span {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        > button {
+            width: 80%;
+        }
+    }
+}
