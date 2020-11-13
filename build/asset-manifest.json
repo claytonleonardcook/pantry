@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Pantry/build/static/css/main.c0f56507.chunk.css",
+    "main.css": "/Pantry/build/static/css/main.816cdd4f.chunk.css",
     "main.js": "/Pantry/build/static/js/main.6fc85ad5.chunk.js",
     "main.js.map": "/Pantry/build/static/js/main.6fc85ad5.chunk.js.map",
     "runtime-main.js": "/Pantry/build/static/js/runtime-main.e61eed05.js",
@@ -8,13 +8,13 @@
     "static/js/2.8b3a7db3.chunk.js": "/Pantry/build/static/js/2.8b3a7db3.chunk.js",
     "static/js/2.8b3a7db3.chunk.js.map": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.map",
     "index.html": "/Pantry/build/index.html",
-    "static/css/main.c0f56507.chunk.css.map": "/Pantry/build/static/css/main.c0f56507.chunk.css.map",
+    "static/css/main.816cdd4f.chunk.css.map": "/Pantry/build/static/css/main.816cdd4f.chunk.css.map",
     "static/js/2.8b3a7db3.chunk.js.LICENSE.txt": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e61eed05.js",
     "static/js/2.8b3a7db3.chunk.js",
-    "static/css/main.c0f56507.chunk.css",
+    "static/css/main.816cdd4f.chunk.css",
     "static/js/main.6fc85ad5.chunk.js"
   ]
 }

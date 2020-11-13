@@ -15,7 +15,7 @@
             > div {
                 margin: 0 5px;
                 > div, button {
-                    width: 80%;
+                    min-width: 100%;
                     margin: 5px 0;
                 }
             }
