@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Pantry/build/static/css/main.b7f06e81.chunk.css",
-    "main.js": "/Pantry/build/static/js/main.7bc96eb0.chunk.js",
-    "main.js.map": "/Pantry/build/static/js/main.7bc96eb0.chunk.js.map",
+    "main.css": "/Pantry/build/static/css/main.5f0c5cea.chunk.css",
+    "main.js": "/Pantry/build/static/js/main.6fc85ad5.chunk.js",
+    "main.js.map": "/Pantry/build/static/js/main.6fc85ad5.chunk.js.map",
     "runtime-main.js": "/Pantry/build/static/js/runtime-main.e61eed05.js",
     "runtime-main.js.map": "/Pantry/build/static/js/runtime-main.e61eed05.js.map",
     "static/js/2.8b3a7db3.chunk.js": "/Pantry/build/static/js/2.8b3a7db3.chunk.js",
     "static/js/2.8b3a7db3.chunk.js.map": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.map",
     "index.html": "/Pantry/build/index.html",
-    "static/css/main.b7f06e81.chunk.css.map": "/Pantry/build/static/css/main.b7f06e81.chunk.css.map",
+    "static/css/main.5f0c5cea.chunk.css.map": "/Pantry/build/static/css/main.5f0c5cea.chunk.css.map",
     "static/js/2.8b3a7db3.chunk.js.LICENSE.txt": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e61eed05.js",
     "static/js/2.8b3a7db3.chunk.js",
-    "static/css/main.b7f06e81.chunk.css",
-    "static/js/main.7bc96eb0.chunk.js"
+    "static/css/main.5f0c5cea.chunk.css",
+    "static/js/main.6fc85ad5.chunk.js"
   ]
 }

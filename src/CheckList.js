@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItemText, ListItem, ListItemIcon } from '@material-ui/core';
+import { List, ListItemText, ListItem, ListItemIcon, Checkbox } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 
 import firebase from 'firebase/app';
@@ -22,6 +22,9 @@ function CheckList({ list, filter, user }) {
                     const { name, checked, tags } = list[key];
                     return (
                         <ListItem key={index}>
+                            <Checkbox checked={checked} onChange={() => {
+                                firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
+                            }} />
                             <ListItemText style={{ textDecoration: `${checked ? 'line-through' : 'none'}` }} primary={name} secondary={
                                 <span>
                                     {
@@ -32,9 +35,7 @@ function CheckList({ list, filter, user }) {
                                         })
                                     }
                                 </span>
-                            } onClick={() => {
-                                firebase.database().ref(`${user.uid}/${key}/checked`).set(!checked);
-                            }} />
+                            } />
                             <ListItemIcon onClick={() => history.push(`/edit/${key}`)}>
                                 <FontAwesomeIcon icon={faEllipsisV} />
                             </ListItemIcon>
