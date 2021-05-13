@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if(user) {
+    if (user) {
       firebase.database().ref(user.uid).on('value', (snapshot) => {
         const value = snapshot.val();
         setList(value || {});
@@ -38,13 +38,13 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route path="/">
             <Login user={user} />
           </Route>
           <Route exact path="/home">
             <Home list={list} user={user} />
           </Route>
-          <Route exact path='/edit/:key' component={({ match }) => <Edit params={match.params} user={user} list={list}/>}/>
+          <Route exact path='/edit/:key' component={({ match }) => <Edit params={match.params} user={user} list={list} />} />
         </Switch>
       </Router>
     </div>
