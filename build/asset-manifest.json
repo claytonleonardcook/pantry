@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Pantry/build/static/css/main.816cdd4f.chunk.css",
-    "main.js": "/Pantry/build/static/js/main.6fc85ad5.chunk.js",
-    "main.js.map": "/Pantry/build/static/js/main.6fc85ad5.chunk.js.map",
-    "runtime-main.js": "/Pantry/build/static/js/runtime-main.e61eed05.js",
-    "runtime-main.js.map": "/Pantry/build/static/js/runtime-main.e61eed05.js.map",
-    "static/js/2.8b3a7db3.chunk.js": "/Pantry/build/static/js/2.8b3a7db3.chunk.js",
-    "static/js/2.8b3a7db3.chunk.js.map": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.map",
-    "index.html": "/Pantry/build/index.html",
-    "static/css/main.816cdd4f.chunk.css.map": "/Pantry/build/static/css/main.816cdd4f.chunk.css.map",
-    "static/js/2.8b3a7db3.chunk.js.LICENSE.txt": "/Pantry/build/static/js/2.8b3a7db3.chunk.js.LICENSE.txt"
+    "main.css": "/pantry/build/static/css/main.816cdd4f.chunk.css",
+    "main.js": "/pantry/build/static/js/main.4c48b5a6.chunk.js",
+    "main.js.map": "/pantry/build/static/js/main.4c48b5a6.chunk.js.map",
+    "runtime-main.js": "/pantry/build/static/js/runtime-main.6617a9f4.js",
+    "runtime-main.js.map": "/pantry/build/static/js/runtime-main.6617a9f4.js.map",
+    "static/js/2.b32ac885.chunk.js": "/pantry/build/static/js/2.b32ac885.chunk.js",
+    "static/js/2.b32ac885.chunk.js.map": "/pantry/build/static/js/2.b32ac885.chunk.js.map",
+    "index.html": "/pantry/build/index.html",
+    "static/css/main.816cdd4f.chunk.css.map": "/pantry/build/static/css/main.816cdd4f.chunk.css.map",
+    "static/js/2.b32ac885.chunk.js.LICENSE.txt": "/pantry/build/static/js/2.b32ac885.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e61eed05.js",
-    "static/js/2.8b3a7db3.chunk.js",
+    "static/js/runtime-main.6617a9f4.js",
+    "static/js/2.b32ac885.chunk.js",
     "static/css/main.816cdd4f.chunk.css",
-    "static/js/main.6fc85ad5.chunk.js"
+    "static/js/main.4c48b5a6.chunk.js"
   ]
 }
